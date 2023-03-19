@@ -1,3 +1,13 @@
+/** 
+Title: app.js
+Author: Janis Gonzalez
+Date: 03/19/23
+Description: app.js for web-420
+*/
+
+"use strict";
+
+//Requiring the paths
 const express = require('express');
 const http = require('http');
 const swaggerUi = require('swagger-ui-express');
@@ -10,6 +20,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// file annotations for openapi
 const options = {
     definition: {
         openapi: '3.0.0',
@@ -18,12 +29,13 @@ const options = {
             version: '1.0.0',
         },
     },
-    apis: ['./routes/*.js'], //files containing annotations for the OpenAPI Specification
+    apis: ['./routes/*.js'],
 
 };
 
+// openapi variable
 const openapiSpecificaion = swaggerJSDoc(options);
-//Wiring the openapiSpecification variable to app 
+
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecificaion));
 
