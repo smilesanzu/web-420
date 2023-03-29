@@ -34,10 +34,10 @@ const options = {
 };
 
 // openapi variable
-const openapiSpecificaion = swaggerJSDoc(options);
+const openapiSpecification = swaggerJsdoc(options);
 
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecificaion));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
 
 app.listen(PORT, () => {
     console.log('Application started and listening on PORT' + PORT);

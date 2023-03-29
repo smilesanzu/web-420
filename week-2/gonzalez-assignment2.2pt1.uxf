@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>210</y>
+      <w>140</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>APIs Action
+--
+Add Composer:
+Creates and adds a
+unique ID
+
+
+
+
+
+--
+View Composer
+By ID:
+Read, retrieve and 
+search
+
+
+
+
+--
+View All Composers:
+Read and retrieve 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>210</y>
+      <w>140</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>HTTP Method
+--
+POST
+
+
+
+
+
+
+
+--
+GET 
+
+
+
+
+
+
+
+--
+GET</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>210</y>
+      <w>140</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>Parameters
+--
+Body
+
+
+
+
+
+
+
+--
+Query
+
+
+
+
+
+
+
+--
+Query
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>210</y>
+      <w>140</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>Before Request
+--
+Info input by User:
+firstName (user)
+lastName (user)
+
+
+
+
+
+--
+ID input by User
+
+
+
+
+
+
+
+--
+Link clicked
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>790</x>
+      <y>210</y>
+      <w>310</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>After Request
+--
+New composer created with unique ID added to
+the database.
+
+{
+"composerId": 1243,
+“firstName”: “Nobuo”,
+“lastName”: “Uematsu”,
+}
+--
+Shows the composer with matching ID.
+
+{
+"composerId": 1243,
+“firstName”: “Nobuo”,
+“lastName”: “Uematsu”,
+}
+
+--
+Shows entire database of composers.
+
+[
+{
+"composerId": 1243,
+“firstName”: “Nobuo”,
+“lastName”: “Uematsu”,
+},
+{
+"composerId": 6785,
+“firstName”: “Georg Philipp”,
+“lastName”: “Telemann”,
+},
+{
+"composerId": 8764,
+“firstName”: “Yoshiki”,
+“lastName”: “Hayashi”,
+}
+]
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>210</y>
+      <w>140</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>Name
+--
+createComposer
+
+
+
+
+
+
+
+--
+findComposerByID
+
+
+
+
+ 
+
+
+--
+findAllComposers
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

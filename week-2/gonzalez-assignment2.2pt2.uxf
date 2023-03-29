@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>130</y>
+      <w>140</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Name
+--
+firstName
+
+
+--
+lastName
+
+
+--
+composerId
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>130</y>
+      <w>140</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Type
+--
+string
+
+
+--
+string
+
+
+--
+number
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>130</y>
+      <w>140</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Required
+--
+yes
+
+
+--
+yes
+
+
+--
+yes
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>130</y>
+      <w>160</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Description
+--
+First name of composer
+
+
+--
+Last name of composer
+
+
+--
+Unique ID assigned
+to composer in the
+database.
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
