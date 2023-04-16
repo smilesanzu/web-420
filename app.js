@@ -13,12 +13,30 @@ const http = require('http');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
 const mongoose = require('mongoose');
+const composerAPI = require("./routes/gonzalez-composer-routes");
+const personAPI = require("./routes/gonzalez-person-routes");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+// holds server port value
+app.set("port", process.env.PORT || 3000);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// mongoose connection
+const conn = "mongodb+srv://web420db.3t4v4ax.mongodb.net/web420DB";
+
+// displays connection success or error messages
+mongoose.connect(conn, {
+    promiseLibrary: require("bluebird"),
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+}).then(() => {
+    console.log(`Connection to web420DB on MongoDB Atlas successful`);
+}).catch(err => {
+    console.log(`MongoDB Error: ${err.message}`);
+});
 
 // file annotations for openapi
 const options = {
@@ -38,7 +56,10 @@ const openapiSpecification = swaggerJsdoc(options);
 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
+app.use("/api", composerAPI);
+app.use("/api", personAPI);
 
-app.listen(PORT, () => {
-    console.log('Application started and listening on PORT' + PORT);
-})
+// use http library to create a port and log to the console the port is listening to
+http.createServer(app).listen(app.get("port"), function() {
+    console.log(`Application started and listening on port ${app.get("port")}`);
+});
