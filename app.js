@@ -15,6 +15,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const mongoose = require('mongoose');
 const composerAPI = require("./routes/gonzalez-composer-routes");
 const personAPI = require("./routes/gonzalez-person-routes");
+const userAPI = require("./routes/gonzalez-session-routes.js");
 
 const app = express();
 
@@ -58,6 +59,7 @@ const openapiSpecification = swaggerJsdoc(options);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
 app.use("/api", composerAPI);
 app.use("/api", personAPI);
+app.use("/api", userAPI);
 
 // use http library to create a port and log to the console the port is listening to
 http.createServer(app).listen(app.get("port"), function() {
