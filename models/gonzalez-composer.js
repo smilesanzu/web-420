@@ -10,8 +10,8 @@ const Schema = mongoose.Schema
 
 // composer schema with string types
 let composerSchema = new Schema({
-    firstName: { type: string },
-    lastName: { type: string }
+    firstName: { type: String },
+    lastName: { type: String }
 });
 
 // exports
