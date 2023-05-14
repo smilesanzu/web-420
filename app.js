@@ -17,6 +17,7 @@ const composerAPI = require("./routes/gonzalez-composer-routes");
 const personAPI = require("./routes/gonzalez-person-routes");
 const userAPI = require("./routes/gonzalez-session-routes.js");
 const customerAPI = require("./routes/gonzalez-node-shopper-routes.js");
+const teamsAPI = require("./routes/gonzalez-capstone-routes.js")
 
 const app = express();
 
@@ -62,6 +63,7 @@ app.use("/api", composerAPI);
 app.use("/api", personAPI);
 app.use("/api", userAPI);
 app.use("/api", customerAPI);
+app.use('/api', teamsAPI);
 
 // use http library to create a port and log to the console the port is listening to
 http.createServer(app).listen(app.get("port"), function() {
